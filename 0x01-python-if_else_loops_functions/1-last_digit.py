@@ -4,9 +4,9 @@ number = random.randint(-10000, 10000)
 
 try:
     last = (abs(number) % 10) * int(number / abs(number))
-except:
+except Exception:
     last = 0
-print(last)
+
 if last > 5:
     report = "and is greater than 5"
 elif last == 0:
