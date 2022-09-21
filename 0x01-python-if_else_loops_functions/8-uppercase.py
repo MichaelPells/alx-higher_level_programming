@@ -3,9 +3,11 @@
 def uppercase(string):
     for c in string:
         if ord(c) in range(97, 123):
-            print("{}".format(chr(ord(c) - 32)), end="")
+            r = chr(ord(c) - 32)
         else:
-            print("{}".format(c), end="")
+            r = c
+        
+        print("{}".format(r), end="")
     print()
 
 
