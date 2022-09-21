@@ -4,7 +4,7 @@ number = random.randint(-10000, 10000)
 
 try:
     last = (abs(number) % 10) * int(number / abs(number))
-except Exception:
+except ZeroDivisionError:
     last = 0
 
 if last > 5:
