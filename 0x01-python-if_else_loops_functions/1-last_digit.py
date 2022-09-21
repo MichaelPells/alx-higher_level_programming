@@ -2,8 +2,11 @@
 import random
 number = random.randint(-10000, 10000)
 
-last = (abs(number) % 10) * int((number + 0.1) / (abs(number) + 0.1))
-
+try:
+    last = (abs(number) % 10) * int(number / abs(number))
+except:
+    last = 0
+print(last)
 if last > 5:
     report = "and is greater than 5"
 elif last == 0:
